@@ -1,20 +1,112 @@
+/* Supprimer les marges par défaut et appliquer le fond noir globalement */
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: #000000; /* Fond noir pour tout l'écran */
+  color: #ffffff;
+  height: 100%; /* Prend toute la hauteur */
+}
+
+/* Style général */
 .home-page {
-    font-family: Arial, sans-serif;
-  }
-  
-  .featured, .upcoming {
-    padding: 20px;
-  }
-  
-  .featured h2, .upcoming h2 {
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  
+  font-family: Arial, sans-serif;
+  background-color: #000000; /* Fond noir */
+  color: #ffffff;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+/* Navbar avec dégradé */
+.navbar {
+  background: linear-gradient(90deg, #FFA500, #000000); /* Dégradé orange vers noir */
+  color: #ffffff;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 0 10px;
+  transition: color 0.3s;
+}
+
+.navbar a:hover {
+  color: #FFD700; /* Couleur or au survol */
+}
+
+/* Titre des sections */
+.upcoming h2, .featured h2 {
+  text-align: center;
+  color: #FFA500; /* Couleur orange */
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* Liste d'événements avec grille */
+.event-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 colonnes */
+  gap: 30px;
+  justify-items: center;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Carte d'événement */
+.event-card {
+  background-color: #333333; /* Fond gris foncé */
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  color: #ffffff;
+  width: 300px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.event-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.event-card h3 {
+  font-size: 1.4rem;
+  margin: 10px 0;
+}
+
+.event-card p {
+  font-size: 1rem;
+  margin: 5px 0;
+}
+
+/* Effet au survol */
+.event-card:hover {
+  transform: scale(1.08);
+  box-shadow: 0 8px 16px rgba(255, 255, 255, 0.3);
+}
+
+/* Media Query pour tablettes */
+@media (max-width: 768px) {
   .event-list {
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-    flex-wrap: wrap;
+    grid-template-columns: repeat(2, 1fr); /* 2 colonnes */
   }
-  
+}
+
+/* Media Query pour mobiles */
+@media (max-width: 480px) {
+  .event-list {
+    grid-template-columns: 1fr; /* 1 colonne */
+  }
+
+  .event-card {
+    width: 90%;
+  }
+}
