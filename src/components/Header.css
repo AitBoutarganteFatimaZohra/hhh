@@ -1,0 +1,79 @@
+/* General styling */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  /* Header styling */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background: linear-gradient(90deg, #ff5f6d, #ffc371);
+    color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  /* Logo styling */
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .logo span {
+    color: #ffe259;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Navigation bar styling */
+  .navbar {
+    display: flex;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+  }
+  
+  .nav-links li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .nav-links li a:hover {
+    color: #ffe259;
+  }
+  
+  /* Responsive styling */
+  @media (max-width: 768px) {
+    .nav-links {
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      right: 20px;
+      background-color: rgba(0, 0, 0, 0.8);
+      border-radius: 10px;
+      padding: 10px;
+      display: none;
+    }
+  
+    .nav-links li {
+      margin: 10px 0;
+    }
+  
+    .header:hover .nav-links {
+      display: flex;
+    }
+  }
+  

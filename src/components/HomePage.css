@@ -1,0 +1,20 @@
+.home-page {
+    font-family: Arial, sans-serif;
+  }
+  
+  .featured, .upcoming {
+    padding: 20px;
+  }
+  
+  .featured h2, .upcoming h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .event-list {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
